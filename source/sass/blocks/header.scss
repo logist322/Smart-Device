@@ -1,0 +1,156 @@
+.header {
+  background-color: rgb(0, 0, 85); //временно для контраста
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1410px;
+  padding: 30px 0;
+
+  @include tablet {
+    width: 100%;
+    padding: 20px 25px;
+  }
+
+  @include mobile {
+    padding: 15px;
+  }
+}
+
+.header__logo {
+  margin-right: 120px;
+
+  @include tablet {
+    margin-right: auto;
+  }
+}
+
+.header__nav-burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 37px;
+    height: 1px;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 37px;
+    height: 1px;
+    background-color: #ffffff;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @include tablet {
+    margin-left: 36px;
+  }
+
+  @include mobile {
+    margin-left: 16px;
+  }
+}
+
+.header__contacts-item {
+  position: relative;
+
+  &:not(:first-child) {
+    margin-left: 88px;
+  }
+
+  a {
+    font-family: $mono;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  a::before {
+    position: absolute;
+    top: 50%;
+    left: -34px;
+    transform: translateY(-50%);
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--email a::before {
+    background-image: url("../../img/envelope.svg");
+  }
+
+  &--phone a::before {
+    background-image: url("../../img/phone.svg");
+  }
+
+  @include tablet {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    a {
+      font-size: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+
+    a::before {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 26px;
+      height: 26px;
+      pointer-events: none;
+    }
+  }
+
+  @include mobile {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.header__call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 32px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-family: $bold;
+  font-size: 14px;
+  color: #ffffff;
+
+  @include tablet {
+    @include visually-hidden;
+  }
+}
