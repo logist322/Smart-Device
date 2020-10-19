@@ -14,6 +14,11 @@
     justify-content: space-between;
     padding: 22px 0;
   }
+
+  @include mobile {
+    padding: 26px 0;
+    flex-direction: column;
+  }
 }
 
 .privacy__copyright {
@@ -30,6 +35,10 @@
 
   @include tablet {
     margin: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
   }
 }
 
