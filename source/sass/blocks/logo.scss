@@ -2,27 +2,35 @@
   display: flex;
   align-items: center;
 
-  &--dark .logo__text-title {
-    color: #203c42;
+  &--dark {
+    .logo__text-title {
+      color: #203c42;
+    }
+  }
+
+  &--light {
+    .logo__img {
+      @include mobile {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    .logo__text-wrap {
+      @include mobile {
+        @include visually-hidden;
+      }
+    }
   }
 }
 
 .logo__img {
   margin-right: 16px;
-
-  @include mobile {
-    width: 38px;
-    height: 38px;
-  }
 }
 
 .logo__text-wrap {
   display: flex;
   flex-direction: column;
-
-  @include mobile {
-    @include visually-hidden;
-  }
 }
 
 .logo__text-title {

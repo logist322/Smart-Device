@@ -8,17 +8,35 @@
   color: #1b2d37;
   opacity: 0.5;
   text-transform: uppercase;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
 }
 
 .privacy__copyright {
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .privacy__terms {
   margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .privacy__developers {
   margin-left: auto;
+
+  @include tablet {
+    margin: 0;
+  }
 }
