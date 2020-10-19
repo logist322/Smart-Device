@@ -71,6 +71,7 @@
   &--closed {
     @include mobile {
       &::after {
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
