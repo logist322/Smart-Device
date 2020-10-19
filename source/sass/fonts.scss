@@ -21,6 +21,17 @@
 }
 
 @font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src:
+    local("Roboto Condensed"),
+    url("../fonts/roboto-condensed-regular.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-regular.woff") format("woff");
+}
+
+@font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
