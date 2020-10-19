@@ -1,6 +1,10 @@
 .logo {
   display: flex;
   align-items: center;
+
+  &--dark .logo__text-title {
+    color: #203c42;
+  }
 }
 
 .logo__img {
