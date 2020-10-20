@@ -17,6 +17,19 @@
     auto auto,
     670px 640px,
     auto auto;
+
+  @include tablet {
+    padding: 0 90px;
+    background-position:
+      560px 130px,
+      500px 50px,
+      50% 0;
+
+    background-size:
+      465px 340px,
+      530px 500px,
+      auto auto;
+  }
 }
 
 .greeting__container {
@@ -25,6 +38,10 @@
   max-width: 1410px;
   padding: 320px 0 90px;
   margin: 0 auto;
+
+  @include tablet {
+    padding: 190px 0 160px;
+  }
 }
 
 .greeting__content-wrap {
@@ -34,6 +51,10 @@
   align-items: flex-start;
   max-width: 720px;
   margin-right: auto;
+
+  @include tablet {
+    max-width: 430px;
+  }
 }
 
 .greeting__title {
@@ -42,6 +63,11 @@
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 0.07em;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 1.17;
+  }
 }
 
 .greeting__subtitle {
@@ -63,6 +89,15 @@
     height: 2px;
     background-color: #ffffff;
   }
+
+  @include tablet {
+    font-size: 18px;
+    padding-left: 48px;
+
+    &::before {
+      width: 33px;
+    }
+  }
 }
 
 .greeting__consultation {
@@ -75,6 +110,10 @@
   color: #ffffff;
   border-radius: 5px;
   background-color: #00b2ff;
+
+  @include tablet {
+    margin-left: 48px;
+  }
 }
 
 .greeting__scroll {
@@ -85,4 +124,8 @@
   transform-origin: 0 0;
   transform: rotate(-90deg);
   opacity: 0.5;
+
+  @include tablet {
+    display: none;
+  }
 }
