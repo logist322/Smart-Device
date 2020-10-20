@@ -9,6 +9,11 @@
   @include tablet {
     padding: 54px 25px 40px;
   }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+  }
 }
 
 .advantages__item {
@@ -34,6 +39,10 @@
     min-height: 235px;
     padding: 25px;
   }
+
+  @include mobile {
+    padding: 25px 25px 30px;
+  }
 }
 
 .advantages__icon {
@@ -46,7 +55,11 @@
   font-size: 24px;
 
   @include tablet {
-    margin-top: 12px;
+    margin-top: 15px;
+  }
+
+  @include mobile {
+    font-size: 20px;
   }
 }
 
