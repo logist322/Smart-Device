@@ -44,6 +44,13 @@
       505px 480px,
       auto auto;
   }
+
+  @include retina {
+    background-image:
+      url("../img/board@2x.png"),
+      url("../img/bg-greeting-triangles.svg"),
+      url("../img/bg@2x.png");
+  }
 }
 
 .greeting__container {
