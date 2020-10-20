@@ -30,6 +30,20 @@
       530px 500px,
       auto auto;
   }
+
+  @include mobile {
+    padding: 0 15px;
+
+    background-position:
+      right -50px top 90px,
+      right -400px top 70px,
+      50% 0;
+
+    background-size:
+      300px 220px,
+      505px 480px,
+      auto auto;
+  }
 }
 
 .greeting__container {
@@ -41,6 +55,10 @@
 
   @include tablet {
     padding: 190px 0 160px;
+  }
+
+  @include mobile {
+    padding: 280px 0 70px;
   }
 }
 
@@ -55,6 +73,10 @@
   @include tablet {
     max-width: 430px;
   }
+
+  @include mobile {
+    max-width: none;
+  }
 }
 
 .greeting__title {
@@ -67,6 +89,10 @@
   @include tablet {
     font-size: 60px;
     line-height: 1.17;
+  }
+
+  @include mobile {
+    font-size: 48px;
   }
 }
 
@@ -98,10 +124,14 @@
       width: 33px;
     }
   }
+
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 .greeting__consultation {
-  margin-top: 36px;
+  margin-top: 42px;
   margin-left: 96px;
   padding: 16px 28px;
   font-family: $bold;
@@ -113,6 +143,25 @@
 
   @include tablet {
     margin-left: 48px;
+  }
+
+  @include mobile {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+.greeting__consultation-desktop-text {
+  @include mobile {
+    display: none;
+  }
+}
+
+.greeting__consultation-mobile-text {
+  display: none;
+
+  @include mobile {
+    display: inline;
   }
 }
 
