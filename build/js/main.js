@@ -50,4 +50,3 @@
 
   setButtonListener(contactsButtonElement, contactsListElement, siteMapButtonElement, siteMapListElement);
 })();
-
