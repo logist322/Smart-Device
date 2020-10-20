@@ -1,9 +1,14 @@
 .advantages__list {
   max-width: 1170px;
-  margin: 112px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  padding: 112px 0 60px;
+
+  @include tablet {
+    padding: 54px 25px 40px;
+  }
 }
 
 .advantages__item {
@@ -24,6 +29,11 @@
       color: #ffffff;
     }
   }
+
+  @include tablet {
+    min-height: 235px;
+    padding: 25px;
+  }
 }
 
 .advantages__icon {
@@ -34,6 +44,10 @@
   margin-top: 23px;
   font-family: $normal;
   font-size: 24px;
+
+  @include tablet {
+    margin-top: 12px;
+  }
 }
 
 .advantages__description {
