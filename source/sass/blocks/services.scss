@@ -12,6 +12,10 @@
   @include tablet {
     padding: 55px 25px 78px;
   }
+
+  @include mobile {
+    padding: 55px 15px 64px;
+  }
 }
 
 .services__title {
@@ -22,9 +26,17 @@
     font-size: 32px;
     line-height: 1.41;
   }
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .services__list {
   margin: 0;
   margin-top: 50px;
+
+  @include mobile {
+    margin-top: 40px;
+  }
 }

@@ -8,6 +8,10 @@
     grid-template-columns: 1fr;
     gap: 45px;
   }
+
+  @include mobile {
+    gap: 30px;
+  }
 }
 
 .service-cards__item {
@@ -73,6 +77,26 @@
       }
     }
   }
+
+  @include mobile {
+    &--board {
+      &::before {
+        background-image: url("../img/services-board-mobile@1x.png");
+      }
+    }
+
+    &--chipset {
+      &::before {
+        background-image: url("../img/services-chipset-mobile@1x.png");
+      }
+    }
+
+    &--tape {
+      &::before {
+        background-image: url("../img/services-tape-mobile@1x.png");
+      }
+    }
+  }
 }
 
 .service-cards a {
@@ -103,6 +127,14 @@
     border-bottom: 1px solid #ffffff;
     transform-origin: center;
     transform: rotate(-45deg);
+  }
+
+  @include tablet {
+    padding: 45px 65px 65px 45px;
+  }
+
+  @include mobile {
+    padding: 25px 65px 65px 35px;
   }
 }
 
