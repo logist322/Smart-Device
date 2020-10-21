@@ -1,7 +1,13 @@
 .service-cards {
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 30px;
+  gap: 30px;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
 }
 
 .service-cards__item {
@@ -26,19 +32,45 @@
 
   &--board {
     &::before {
-      background-image: url("../img/services-board@1x.png");
+      background-image: url("../img/services-board-desktop@1x.png");
     }
   }
 
   &--chipset {
     &::before {
-      background-image: url("../img/services-chipset@1x.png");
+      background-image: url("../img/services-chipset-desktop@1x.png");
     }
   }
 
   &--tape {
     &::before {
-      background-image: url("../img/services-tape@1x.png");
+      background-image: url("../img/services-tape-desktop@1x.png");
+    }
+  }
+
+  @include tablet {
+    min-height: 256px;
+
+    &::before {
+      background-size: cover;
+    }
+
+    &--board {
+      &::before {
+        background-image: url("../img/services-board-tablet@1x.png");
+      }
+    }
+
+    &--chipset {
+      &::before {
+        background-image: url("../img/services-chipset-tablet@1x.png");
+      }
+    }
+
+    &--tape {
+      &::before {
+        background-image: url("../img/services-tape-tablet@1x.png");
+      }
     }
   }
 }
@@ -76,7 +108,7 @@
 
 .service-cards__title {
   display: block;
-  width: 60%;
+  width: 155px;
   font-family: $normal;
   font-weight: 400;
   font-size: 20px;
