@@ -1,0 +1,49 @@
+.about__container {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 55px auto 110px;
+  padding-left: 176px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 117px;
+    height: 307px;
+    background-image: url("../img/2005@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.about__title {
+  font-family: $normal;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #666666;
+}
+
+.about__description {
+  font-family: $mono;
+  font-size: 16px;
+  margin-top: 20px;
+  color: #666666;
+  line-height: 1.42;
+}
+
+.about__more {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 40px;
+  font-family: $bold;
+  font-size: 14px;
+  padding: 14px 48px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 5px;
+}
