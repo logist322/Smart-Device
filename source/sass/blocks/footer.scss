@@ -31,18 +31,6 @@
     align-items: center;
     padding: 20px 0 25px;
     margin: 0;
-
-    // &::after {
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   width: 100vw;
-    //   height: 1px;
-    //   content: "";
-    //   background-color: #626962;
-    //   opacity: 0.2;
-    // }
   }
 
   @include mobile {
@@ -69,6 +57,9 @@
 }
 
 .footer__socio-list {
+  margin: 0;
+  padding: 0;
+
   @include mobile {
     margin-top: 32px;
   }

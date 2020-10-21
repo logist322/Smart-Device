@@ -1,0 +1,22 @@
+.services {
+  background-color: #1b2d37;
+  color: #ffffff;
+}
+
+.services__container {
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 90px 0 126px;
+}
+
+.services__title {
+  font-family: $normal;
+  font-size: 36px;
+}
+
+.services__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
