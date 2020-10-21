@@ -10,11 +10,16 @@
     top: 0;
     left: 0;
     content: "";
-    width: 117px;
-    height: 307px;
+    width: 176px;
+    height: 100%;
     background-image: url("../img/2005@1x.png");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    margin: 20px 25px 80px;
+    padding-left: 184px;
   }
 }
 
@@ -24,6 +29,10 @@
   font-weight: 400;
   margin-bottom: 24px;
   color: #666666;
+
+  @include tablet {
+    font-size: 32px;
+  }
 }
 
 .about__description {
@@ -46,4 +55,8 @@
   color: #00b2ff;
   border: 1px solid #00b2ff;
   border-radius: 5px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 }
