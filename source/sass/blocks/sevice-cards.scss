@@ -38,17 +38,35 @@
     &::before {
       background-image: url("../img/services-board-desktop@1x.png");
     }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/services-board-desktop@2x.png");
+      }
+    }
   }
 
   &--chipset {
     &::before {
       background-image: url("../img/services-chipset-desktop@1x.png");
     }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/services-chipset-desktop@2x.png");
+      }
+    }
   }
 
   &--tape {
     &::before {
       background-image: url("../img/services-tape-desktop@1x.png");
+    }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/services-tape-desktop@2x.png");
+      }
     }
   }
 
@@ -63,17 +81,35 @@
       &::before {
         background-image: url("../img/services-board-tablet@1x.png");
       }
+
+      @include retina {
+        &::before {
+          background-image: url("../img/services-board-tablet@2x.png");
+        }
+      }
     }
 
     &--chipset {
       &::before {
         background-image: url("../img/services-chipset-tablet@1x.png");
       }
+
+      @include retina {
+        &::before {
+          background-image: url("../img/services-chipset-tablet@2x.png");
+        }
+      }
     }
 
     &--tape {
       &::before {
         background-image: url("../img/services-tape-tablet@1x.png");
+      }
+    }
+
+    @include retina {
+      &::before {
+        background-image: url("../img/services-tape-tablet@2x.png");
       }
     }
   }
@@ -83,17 +119,35 @@
       &::before {
         background-image: url("../img/services-board-mobile@1x.png");
       }
+
+      @include retina {
+        &::before {
+          background-image: url("../img/services-board-mobile@2x.png");
+        }
+      }
     }
 
     &--chipset {
       &::before {
         background-image: url("../img/services-chipset-mobile@1x.png");
       }
+
+      @include retina {
+        &::before {
+          background-image: url("../img/services-chipset-mobile@2x.png");
+        }
+      }
     }
 
     &--tape {
       &::before {
         background-image: url("../img/services-tape-mobile@1x.png");
+      }
+
+      @include retina {
+        &::before {
+          background-image: url("../img/services-tape-mobile@2x.png");
+        }
       }
     }
   }
