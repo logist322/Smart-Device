@@ -7,6 +7,7 @@
   box-sizing: border-box;
   max-width: 1170px;
   margin: 0 auto;
+  padding: 96px 0 114px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "nothing content";
@@ -56,6 +57,12 @@
 
     &::after {
       display: none;
+    }
+  }
+
+  @include retina {
+    &::after {
+      background-image: url("../img/airplane@2x.png");
     }
   }
 }
