@@ -1,0 +1,140 @@
+.modal-call {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 490px;
+  padding: 35px 40px;
+  background-color: #00b2ff;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.modal-call__title {
+  font-family: $normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.43;
+}
+
+.modal-call__subtitle {
+  font-family: $mono;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.modal-call__form {
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  grid-template-areas:
+    "name"
+    "tel"
+    "textarea"
+    "button"
+    "check";
+}
+
+.modal-call__form input[type="text"],
+.modal-call__form input[type="tel"],
+.modal-call__form textarea {
+  padding: 14px 16px;
+  font-family: $mono;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.modal-call__form input[type="text"]::placeholder,
+.modal-call__form input[type="tel"]::placeholder,
+.modal-call__form textarea::placeholder {
+  color: #ffffff;
+}
+
+.modal-call__form textarea {
+  box-sizing: border-box;
+  resize: none;
+  grid-area: textarea;
+  height: 104px;
+}
+
+.modal-call__form label {
+  position: relative;
+  grid-area: check;
+  cursor: pointer;
+  font-family: $mono;
+  font-size: 14px;
+  align-self: center;
+  padding-left: 42px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ffffff;
+  }
+
+  @include mobile {
+    padding-left: 32px;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.modal-call__form input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  content: "";
+  width: 5px;
+  height: 8px;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform-origin: center;
+  transform: rotate(45deg);
+
+  @include mobile {
+    left: 6px;
+  }
+}
+
+.modal-call__form input[type="checkbox"]:focus + label {
+  outline: 2px auto black;
+  outline-offset: 5px;
+}
+
+.modal-call__form button {
+  grid-area: button;
+  padding: 14px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: $bold;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-call__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/cross.svg");
+  background-size: contain;
+  cursor: pointer;
+}

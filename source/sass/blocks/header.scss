@@ -151,6 +151,6 @@
   color: #ffffff;
 
   @include tablet {
-    @include visually-hidden;
+    display: none;
   }
 }
