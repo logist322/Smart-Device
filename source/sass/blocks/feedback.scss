@@ -1,0 +1,142 @@
+.feedback {
+  background-color: #00b2ff;
+  color: #ffffff;
+}
+
+.feedback__container {
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 96px 0 114px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "nothing content";
+}
+
+.feedback__content-wrap {
+  position: relative;
+  grid-area: content;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: -734px;
+    content: "";
+    width: 600px;
+    height: 500px;
+    background-image: url("../img/bg-greeting-triangles.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    top: 60px;
+    left: -600px;
+    content: "";
+    width: 511px;
+    height: 288px;
+    background-image: url("../img/airplane@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.feedback__title {
+  font-family: $normal;
+  font-size: 36px;
+}
+
+.feedback__subtitle {
+  font-family: $mono;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.feedback__form {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name tel"
+    "textarea textarea"
+    "button check";
+  column-gap: 30px;
+  row-gap: 40px;
+}
+
+.feedback__form input[type="text"],
+.feedback__form input[type="tel"],
+.feedback__form textarea {
+  padding: 14px 16px;
+  font-family: $mono;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.feedback__form input[type="text"]::placeholder,
+.feedback__form input[type="tel"]::placeholder,
+.feedback__form textarea::placeholder {
+  color: #ffffff;
+}
+
+.feedback__form textarea {
+  box-sizing: border-box;
+  height: 154px;
+  resize: none;
+  grid-area: textarea;
+}
+
+.feedback__form label {
+  position: relative;
+  grid-area: check;
+  cursor: pointer;
+  font-family: $mono;
+  font-size: 14px;
+  align-self: center;
+  padding-left: 42px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ffffff;
+  }
+}
+
+.feedback__form input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  content: "";
+  width: 5px;
+  height: 8px;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+.feedback__form input[type="checkbox"]:focus + label {
+  outline: 2px auto black;
+  outline-offset: 5px;
+}
+
+.feedback__form button {
+  grid-area: button;
+  padding: 14px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: $bold;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
