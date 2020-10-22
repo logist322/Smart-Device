@@ -1,3 +1,26 @@
+.footer {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    content: "";
+    background-color: #626962;
+    opacity: 0.2;
+  }
+
+  @include tablet {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .footer__container {
   margin: 0 auto;
   box-sizing: border-box;
@@ -106,19 +129,19 @@
   width: 100%;
   margin-top: 70px;
 
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    content: "";
-    background-color: #626962;
-    opacity: 0.2;
-  }
-
   @include tablet {
     margin-top: 0;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 1px;
+      content: "";
+      background-color: #626962;
+      opacity: 0.2;
+    }
   }
 }
