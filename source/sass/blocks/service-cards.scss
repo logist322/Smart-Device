@@ -105,11 +105,11 @@
       &::before {
         background-image: url("../img/services-tape-tablet@1x.png");
       }
-    }
 
-    @include retina {
-      &::before {
-        background-image: url("../img/services-tape-tablet@2x.png");
+      @include retina {
+        &::before {
+          background-image: url("../img/services-tape-tablet@2x.png");
+        }
       }
     }
   }
@@ -193,6 +193,8 @@
 }
 
 .service-cards__title {
+  margin: 0;
+  padding: 0;
   display: block;
   width: 155px;
   font-family: $normal;
