@@ -7,10 +7,14 @@
   box-sizing: border-box;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 96px 0 114px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "nothing content";
+
+  @include tablet {
+    display: block;
+    padding: 94px 90px 100px;
+  }
 }
 
 .feedback__content-wrap {
@@ -40,17 +44,35 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @include tablet {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .feedback__title {
   font-family: $normal;
   font-size: 36px;
+
+  @include tablet {
+    font-size: 32px;
+  }
 }
 
 .feedback__subtitle {
   font-family: $mono;
   font-size: 16px;
   margin-top: 16px;
+
+  @include tablet {
+    margin-top: 24px;
+  }
 }
 
 .feedback__form {
