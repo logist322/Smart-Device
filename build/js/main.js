@@ -53,3 +53,96 @@
 $(document).ready(function(){
   $('.feedback__form input[type="tel"]').mask('+7(000)000-00-00');
 });
+
+$(document).ready(function(){
+  $('.modal-call__form input[type="tel"]').mask('+7(000)000-00-00');
+});
+
+(function () {
+  function show(elements) {
+    elements.forEach(function (element) {
+      element.classList.remove('visually-hidden');
+    });
+  }
+
+  function hide(elements) {
+    elements.forEach(function (element) {
+      element.classList.add('visually-hidden');
+    });
+  }
+
+  function keyDownHandler(evt) {
+    if (evt.key !== 'Escape') {
+      return;
+    }
+
+    closeHandler();
+  }
+
+  function closeHandler() {
+    hide([modalElement, bgElement]);
+    removeHandlers();
+  }
+
+  function addHandlers() {
+    window.addEventListener('keydown', keyDownHandler);
+
+    bgElement.addEventListener('click', closeHandler);
+
+    closeButtonElement.addEventListener('click', closeHandler);
+  }
+
+  function removeHandlers() {
+    window.removeEventListener('keydown', keyDownHandler);
+
+    bgElement.removeEventListener('click', closeHandler);
+
+    closeButtonElement.removeEventListener('click', closeHandler);
+  }
+
+  var callButtonElement = document.querySelector('.header__call');
+  var modalElement = document.querySelector('.modal-call');
+  var nameInputElement = modalElement.querySelector('input[type="text"]');
+  var telInputElement = modalElement.querySelector('input[type="tel"]');
+  var submitButtonElement = modalElement.querySelector('button[type="submit"]');
+  var closeButtonElement = modalElement.querySelector('.modal-call__close');
+  var bgElement = document.querySelector('.modal-bg');
+
+  var isStorageSupport = true;
+  var storageName = '';
+  var storageTel = '';
+
+  try {
+    storageName = localStorage.getItem('name');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  try {
+    storageTel = localStorage.getItem('tel');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  nameInputElement.value = storageName;
+  telInputElement.value = storageTel;
+
+  if (isStorageSupport) {
+    submitButtonElement.addEventListener('click', function () {
+      if (!(nameInputElement.value && telInputElement.value)) {
+        return;
+      }
+
+      localStorage.setItem('name', nameInputElement.value);
+      localStorage.setItem('tel', telInputElement.value);
+    });
+  }
+
+  callButtonElement.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    show([modalElement, bgElement]);
+    nameInputElement.focus();
+    addHandlers();
+  });
+})();
