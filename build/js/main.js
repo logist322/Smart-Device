@@ -34,6 +34,7 @@
     removeNoJSButtonClass(siteMapButtonElement);
     removeNoJSListClass(siteMapListElement);
 
+    setButtonListener(siteMapButtonElement, siteMapListElement, contactsButtonElement, contactsListElement);
   }
 
   var contactsElement = document.querySelector('.footer__contacts');
@@ -44,9 +45,11 @@
 
     removeNoJSButtonClass(contactsButtonElement);
     removeNoJSListClass(contactsListElement);
+
+    setButtonListener(contactsButtonElement, contactsListElement, siteMapButtonElement, siteMapListElement);
   }
-
-  setButtonListener(siteMapButtonElement, siteMapListElement, contactsButtonElement, contactsListElement);
-
-  setButtonListener(contactsButtonElement, contactsListElement, siteMapButtonElement, siteMapListElement);
 })();
+
+$(document).ready(function(){
+  $('.feedback__form input[type="tel"]').mask('+7(000)000-00-00');
+});
