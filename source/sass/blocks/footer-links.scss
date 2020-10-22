@@ -131,4 +131,15 @@
   font-family: $mono;
   color: #1b2d37;
   opacity: 0.5;
+
+  &:hover {
+    border-color: #00b2ff;
+    color: #00b2ff;
+    transition: 0.1s;
+    font-weight: bold;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

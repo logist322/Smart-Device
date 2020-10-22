@@ -38,6 +38,17 @@
 .privacy__terms {
   margin: 0 auto;
 
+  &:hover {
+    border-color: #00b2ff;
+    color: #00b2ff;
+    transition: 0.1s;
+    font-weight: bold;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @include tablet {
     margin: 0;
   }
@@ -49,6 +60,17 @@
 
 .privacy__developers {
   margin-left: auto;
+
+  &:hover {
+    border-color: #00b2ff;
+    color: #00b2ff;
+    transition: 0.1s;
+    font-weight: bold;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include tablet {
     margin: 0;

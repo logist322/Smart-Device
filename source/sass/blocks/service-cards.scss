@@ -160,6 +160,15 @@
   padding: 55px 65px 65px 45px;
   display: block;
 
+  &:hover {
+    box-shadow: 0 0 20px 5px #ffffff;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   &::before {
     position: absolute;
     bottom: 0;

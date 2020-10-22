@@ -152,6 +152,16 @@
   border-radius: 5px;
   background-color: #00b2ff;
 
+  &:hover {
+    background-color: #ffffff;
+    color: #00b2ff;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @include tablet {
     margin-left: 48px;
   }
@@ -184,6 +194,16 @@
   transform-origin: 0 0;
   transform: rotate(-90deg);
   opacity: 0.5;
+
+  &:hover {
+    color: #00b2ff;
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include tablet {
     display: none;

@@ -50,12 +50,19 @@
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-}
 
-.modal-call__form input[type="text"]::placeholder,
-.modal-call__form input[type="tel"]::placeholder,
-.modal-call__form textarea::placeholder {
-  color: #ffffff;
+  &::placeholder {
+    color: #ffffff;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 0 #ffffff;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .modal-call__form textarea {
@@ -127,6 +134,17 @@
   border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    border-color: #00b2ff;
+    background-color: #ffffff;
+    color: #00b2ff;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .modal-call__close {

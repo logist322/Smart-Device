@@ -55,6 +55,14 @@
     font-family: $mono;
     font-size: 16px;
     color: #ffffff;
+
+    &:hover {
+      color: #00b2ff;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   a::before {
@@ -118,6 +126,16 @@
   font-family: $bold;
   font-size: 14px;
   color: #ffffff;
+
+  &:hover {
+    border-color: #00b2ff;
+    color: #00b2ff;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include tablet {
     display: none;
