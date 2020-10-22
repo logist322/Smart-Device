@@ -146,3 +146,19 @@ $(document).ready(function(){
     addHandlers();
   });
 })();
+
+(function () {
+  document.querySelector('.greeting__consultation').addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    document.querySelector('.feedback').scrollIntoView({behavior: 'smooth'});
+  });
+})();
+
+(function () {
+  document.querySelector('.greeting__scroll').addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    document.querySelector('.advantages').scrollIntoView({behavior: 'smooth'});
+  });
+})();
