@@ -72,7 +72,7 @@
   height: 104px;
 }
 
-.modal-call__form label {
+.modal-call__form label[for="modal-confirm"] {
   position: relative;
   grid-area: check;
   cursor: pointer;

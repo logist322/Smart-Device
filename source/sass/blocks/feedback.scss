@@ -202,7 +202,7 @@
   }
 }
 
-.feedback__form label {
+.feedback__form label[for="confirm"] {
   position: relative;
   grid-area: check;
   cursor: pointer;
