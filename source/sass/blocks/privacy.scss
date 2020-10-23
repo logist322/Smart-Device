@@ -19,6 +19,12 @@
     padding: 26px 0;
     flex-direction: column;
   }
+
+  @include IE {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .privacy__copyright {
@@ -27,6 +33,10 @@
 
   @include tablet {
     display: none;
+  }
+
+  @include IE {
+    width: 33.33%;
   }
 }
 
@@ -74,5 +84,15 @@
 
   @include tablet {
     margin: 0;
+  }
+
+  @include IE {
+    @include tablet {
+      margin-left: auto;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
   }
 }

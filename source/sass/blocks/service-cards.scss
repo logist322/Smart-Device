@@ -12,6 +12,11 @@
   @include mobile {
     gap: 30px;
   }
+
+  @include IE {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .service-cards__item {
@@ -149,6 +154,37 @@
         &::before {
           background-image: url("../img/services-tape-mobile@2x.png");
         }
+      }
+    }
+  }
+
+  @include IE {
+    box-sizing: border-box;
+    width: calc((100% - 60px) / 3);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 30px;
+    }
+
+    @include tablet {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 45px;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
+      }
+    }
+
+    @include mobile {
+      &:not(:first-child) {
+        margin-top: 30px;
       }
     }
   }

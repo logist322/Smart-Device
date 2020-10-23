@@ -7,6 +7,10 @@
   @include tablet {
     display: flex;
   }
+
+  @include IE {
+    display: flex;
+  }
 }
 
 .socio__item {
@@ -43,5 +47,11 @@
 
   &--vk::after {
     background-image: url("../img/vk.svg");
+  }
+
+  @include IE {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
   }
 }

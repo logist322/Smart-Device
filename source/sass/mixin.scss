@@ -16,6 +16,12 @@
   }
 }
 
+@mixin IE {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;

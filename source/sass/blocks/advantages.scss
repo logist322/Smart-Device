@@ -14,6 +14,11 @@
     grid-template-columns: 1fr;
     padding: 40px 15px;
   }
+
+  @include IE {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
@@ -31,7 +36,7 @@
     background-color: #00b2ff;
     transition: 0.3s;
 
-    .advantages__description {
+    p {
       color: #ffffff;
     }
   }
@@ -43,6 +48,30 @@
 
   @include mobile {
     padding: 25px 25px 30px;
+  }
+
+  @include IE {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n-1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(n+3) {
+      margin-top: 30px;
+    }
+
+    @include mobile {
+      width: 100%;
+
+      &:nth-child(2n-1) {
+        margin-right: 0;
+      }
+
+      &:nth-child(n+1) {
+        margin-top: 30px;
+      }
+    }
   }
 }
 
