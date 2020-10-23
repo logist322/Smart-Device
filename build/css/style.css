@@ -176,6 +176,9 @@ template {
   font-display: fallback;
   src: local("Roboto"), url("../fonts/roboto-500.woff2") format("woff2"), url("../fonts/roboto-500.woff") format("woff"); }
 
+html {
+  overflow-x: hidden; }
+
 body {
   min-width: 320px;
   margin: 0;
@@ -322,6 +325,9 @@ a {
   @media (max-width: 1023px) {
     .header__call {
       display: none; } }
+
+.footer {
+  overflow: hidden; }
 
 .footer__container {
   margin: 0 auto;
