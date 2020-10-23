@@ -14,9 +14,9 @@
     50% 0;
 
   background-size:
-    auto auto,
+    705px 515px,
     670px 640px,
-    auto auto;
+    1920px 878px;
 
   @include tablet {
     padding: 0 90px;
@@ -28,7 +28,7 @@
     background-size:
       465px 340px,
       530px 500px,
-      auto auto;
+      1920px 878px;
   }
 
   @include mobile {
@@ -42,7 +42,7 @@
     background-size:
       300px 220px,
       505px 480px,
-      auto auto;
+      1920px 878px;
   }
 
   @include retina {
