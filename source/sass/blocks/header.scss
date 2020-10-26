@@ -112,6 +112,12 @@
       margin-left: 10px;
     }
   }
+
+  @include IE {
+    a::before {
+      background-position: 0 0;
+    }
+  }
 }
 
 .header__call {

@@ -295,6 +295,9 @@ a {
   @media (max-width: 767px) {
     .header__contacts-item:not(:first-child) {
       margin-left: 10px; } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .header__contacts-item a::before {
+      background-position: 0 0; } }
 
 .header__call {
   display: -webkit-box;
@@ -1610,6 +1613,26 @@ a {
   grid-template-columns: 1fr;
   gap: 30px;
   grid-template-areas: "name" "tel" "textarea" "button" "check"; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .modal-call__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .modal-call__form input[type="text"],
+  .modal-call__form input[type="tel"] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%; }
+    .modal-call__form input[type="text"]:nth-child(n+2),
+    .modal-call__form input[type="tel"]:nth-child(n+2) {
+      margin-top: 30px; } }
 
 .modal-call__form input[type="text"],
 .modal-call__form input[type="tel"],
@@ -1650,6 +1673,10 @@ a {
   resize: none;
   grid-area: textarea;
   height: 104px; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .modal-call__form textarea {
+      width: 100%;
+      margin-top: 30px; } }
 
 .modal-call__form label[for="modal-confirm"] {
   position: relative;
@@ -1672,6 +1699,15 @@ a {
       padding-left: 32px; }
       .modal-call__form label[for="modal-confirm"]::before {
         left: 0; } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .modal-call__form label[for="modal-confirm"] {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 100%;
+      margin-top: 30px; } }
 
 .modal-call__form input[type="checkbox"]:checked + label::after {
   position: absolute;
@@ -1714,6 +1750,12 @@ a {
     transition: 0.3s; }
   .modal-call__form button:active {
     opacity: 0.6; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .modal-call__form button {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 100%;
+      margin-top: 30px; } }
 
 .modal-call__close {
   position: absolute;
