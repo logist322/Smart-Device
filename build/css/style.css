@@ -500,7 +500,8 @@ a {
     .socio {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      gap: 0; } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .socio {
       display: -webkit-box;
@@ -523,7 +524,7 @@ a {
     height: 27px;
     pointer-events: none;
     fill: currentColor; }
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  @media (max-width: 1023px) {
     .socio__item:not(:last-child) {
       margin-right: 16px; } }
 

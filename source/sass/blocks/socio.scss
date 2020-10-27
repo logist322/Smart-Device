@@ -6,6 +6,7 @@
 
   @include tablet {
     display: flex;
+    gap: 0;
   }
 
   @include IE {
@@ -36,7 +37,7 @@
     fill: currentColor;
   }
 
-  @include IE {
+  @include tablet {
     &:not(:last-child) {
       margin-right: 16px;
     }
