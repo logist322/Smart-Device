@@ -645,12 +645,11 @@ a {
   font-family: "PT Mono", "Arial", sans-serif;
   color: #1b2d37;
   opacity: 0.5; }
-  .footer-links__item:hover {
-    border-color: #00b2ff;
+  .footer-links__item a:hover {
     color: #00b2ff;
     -webkit-transition: 0.1s;
     transition: 0.1s; }
-  .footer-links__item:active {
+  .footer-links__item a:active {
     opacity: 0.6; }
 
 .privacy {

@@ -132,13 +132,14 @@
   color: #1b2d37;
   opacity: 0.5;
 
-  &:hover {
-    border-color: #00b2ff;
-    color: #00b2ff;
-    transition: 0.1s;
-  }
+  a {
+    &:hover {
+      color: #00b2ff;
+      transition: 0.1s;
+    }
 
-  &:active {
-    opacity: 0.6;
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
