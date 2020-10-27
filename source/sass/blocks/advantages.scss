@@ -1,3 +1,11 @@
+.advantages {
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
 .advantages__list {
   max-width: 1170px;
   margin: 0 auto;

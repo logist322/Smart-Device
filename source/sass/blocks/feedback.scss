@@ -1,6 +1,11 @@
 .feedback {
   background-color: #00b2ff;
   color: #ffffff;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .feedback__container {

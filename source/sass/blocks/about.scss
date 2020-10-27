@@ -1,3 +1,11 @@
+.about {
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
 .about__container {
   position: relative;
   box-sizing: border-box;

@@ -924,6 +924,12 @@ a {
     .greeting__scroll {
       display: none; } }
 
+.advantages {
+  padding: 0 20px; }
+  @media (max-width: 1023px) {
+    .advantages {
+      padding: 0; } }
+
 .advantages__list {
   max-width: 1170px;
   margin: 0 auto;
@@ -1016,6 +1022,12 @@ a {
   line-height: 1.34;
   color: #666666; }
 
+.about {
+  padding: 0 20px; }
+  @media (max-width: 1023px) {
+    .about {
+      padding: 0; } }
+
 .about__container {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -1098,7 +1110,11 @@ a {
 
 .services {
   background-color: #1b2d37;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 0 20px; }
+  @media (max-width: 1023px) {
+    .services {
+      padding: 0; } }
 
 .services__container {
   -webkit-box-sizing: border-box;
@@ -1305,7 +1321,11 @@ a {
 
 .feedback {
   background-color: #00b2ff;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 0 20px; }
+  @media (max-width: 1023px) {
+    .feedback {
+      padding: 0; } }
 
 .feedback__container {
   -webkit-box-sizing: border-box;

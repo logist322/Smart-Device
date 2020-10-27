@@ -1,6 +1,11 @@
 .services {
   background-color: #1b2d37;
   color: #ffffff;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .services__container {
