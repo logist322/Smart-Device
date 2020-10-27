@@ -1440,7 +1440,8 @@ a {
   font-size: 16px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-  border: none; }
+  border: none;
+  border-radius: 0; }
   .feedback__form input[type="text"]::-webkit-input-placeholder, .feedback__form input[type="tel"]::-webkit-input-placeholder, .feedback__form textarea::-webkit-input-placeholder {
     color: #ffffff; }
   .feedback__form input[type="text"]::-moz-placeholder, .feedback__form input[type="tel"]::-moz-placeholder, .feedback__form textarea::-moz-placeholder {
