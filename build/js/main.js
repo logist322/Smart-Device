@@ -116,6 +116,7 @@ $(document).ready(function(){
 
   function closeHandler() {
     hide([modalElement, bgElement]);
+    document.body.classList.remove('body--fixed');
     removeHandlers();
   }
 
@@ -182,6 +183,7 @@ $(document).ready(function(){
     evt.preventDefault();
 
     show([modalElement, bgElement]);
+    document.body.classList.add('body--fixed');
     nameInputElement.focus();
     addHandlers();
   });

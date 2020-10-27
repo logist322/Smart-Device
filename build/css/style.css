@@ -179,10 +179,13 @@ template {
 html {
   overflow-x: hidden; }
 
-body {
+.body {
   min-width: 320px;
   margin: 0;
   padding: 0; }
+  .body--fixed {
+    overflow: hidden;
+    height: 100vh; }
 
 a {
   text-decoration: none;
