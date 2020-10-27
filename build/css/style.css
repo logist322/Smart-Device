@@ -1090,7 +1090,7 @@ a {
     background-repeat: no-repeat; }
   @media (max-width: 1023px) {
     .about__container {
-      margin: 20px 25px 80px;
+      margin: 20px 25px 82px;
       padding-left: 185px; }
       .about__container::before {
         top: 0;
@@ -1193,18 +1193,19 @@ a {
           box-sizing: border-box;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 90px 0 126px; }
+  padding: 92px 0 126px; }
   @media (max-width: 1023px) {
     .services__container {
-      padding: 55px 25px 78px; } }
+      padding: 52px 25px 78px; } }
   @media (max-width: 767px) {
     .services__container {
-      padding: 55px 15px 64px; } }
+      padding: 48px 15px 64px; } }
 
 .services__title {
   margin: 0;
   padding: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 36px; }
   @media (max-width: 1023px) {
     .services__title {
@@ -1212,14 +1213,18 @@ a {
       line-height: 1.41; } }
   @media (max-width: 767px) {
     .services__title {
-      font-size: 28px; } }
+      font-size: 28px;
+      padding-left: 10px; } }
 
 .services__list {
   margin: 0;
-  margin-top: 50px; }
+  margin-top: 57px; }
+  @media (max-width: 1023px) {
+    .services__list {
+      margin-top: 49px; } }
   @media (max-width: 767px) {
     .services__list {
-      margin-top: 40px; } }
+      margin-top: 42px; } }
 
 .service-cards {
   padding: 0;
@@ -1344,7 +1349,7 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  padding: 55px 65px 65px 45px;
+  padding: 50px 65px 65px 45px;
   display: block; }
   .service-cards a:hover {
     -webkit-box-shadow: 0 0 20px 5px #ffffff;
@@ -1358,13 +1363,13 @@ a {
     bottom: 0;
     right: 0;
     content: "";
-    width: 64px;
-    height: 64px;
+    width: 63px;
+    height: 63px;
     background-color: #00b2ff; }
   .service-cards a::after {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 28px;
+    right: 28px;
     content: "";
     width: 6px;
     height: 6px;
@@ -1376,10 +1381,10 @@ a {
             transform: rotate(-45deg); }
   @media (max-width: 1023px) {
     .service-cards a {
-      padding: 45px 65px 65px 45px; } }
+      padding: 40px 65px 65px 45px; } }
   @media (max-width: 767px) {
     .service-cards a {
-      padding: 25px 65px 65px 35px; } }
+      padding: 22px 65px 65px 35px; } }
 
 .service-cards__item h3 {
   margin: 0;

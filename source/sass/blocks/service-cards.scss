@@ -194,7 +194,7 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding: 55px 65px 65px 45px;
+  padding: 50px 65px 65px 45px;
   display: block;
 
   &:hover {
@@ -211,15 +211,15 @@
     bottom: 0;
     right: 0;
     content: "";
-    width: 64px;
-    height: 64px;
+    width: 63px;
+    height: 63px;
     background-color: #00b2ff;
   }
 
   &::after {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 28px;
+    right: 28px;
     content: "";
     width: 6px;
     height: 6px;
@@ -230,11 +230,11 @@
   }
 
   @include tablet {
-    padding: 45px 65px 65px 45px;
+    padding: 40px 65px 65px 45px;
   }
 
   @include mobile {
-    padding: 25px 65px 65px 35px;
+    padding: 22px 65px 65px 35px;
   }
 }
 
