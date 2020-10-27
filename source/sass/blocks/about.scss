@@ -4,18 +4,24 @@
   @include tablet {
     padding: 0;
   }
+
+  .desktop-text {
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .about__container {
   position: relative;
   box-sizing: border-box;
   max-width: 1170px;
-  margin: 55px auto 110px;
-  padding-left: 176px;
+  margin: 47px auto 110px;
+  padding-left: 180px;
 
   &::before {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     content: "";
     width: 176px;
@@ -27,15 +33,26 @@
 
   @include tablet {
     margin: 20px 25px 80px;
-    padding-left: 184px;
+    padding-left: 185px;
+
+    &::before {
+      top: 0;
+      min-height: 350px;
+    }
   }
 
   @include mobile {
     margin: 0;
-    padding: 20px 15px 65px;
+    padding: 15px 15px 65px;
 
     &::before {
       display: none;
+    }
+  }
+
+  @include retina {
+    &::before {
+      background-image: url("../img/2005@2x.png");
     }
   }
 }
@@ -46,7 +63,7 @@
   font-family: $normal;
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   color: #666666;
 
   @include tablet {
@@ -54,6 +71,7 @@
   }
 
   @include mobile {
+    margin-bottom: 28px;
     font-size: 28px;
   }
 }
@@ -63,23 +81,47 @@
   padding: 0;
   font-family: $mono;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 22px;
   color: #666666;
   line-height: 1.42;
+  padding-right: 5px;
+
+  @include tablet {
+    padding-right: 0;
+    padding-left: 2px;
+  }
 
   @include mobile {
-    margin-top: 32px;
+    line-height: 1.37;
+
+    &:not(:first-of-type) {
+      margin-top: 46px;
+    }
+  }
+}
+
+.about__desktop-text {
+  @include tablet {
+    display: none;
+  }
+}
+
+.about__dots {
+  display: none;
+
+  @include tablet {
+    display: inline;
   }
 }
 
 .about__more {
   display: inline-block;
   vertical-align: middle;
-  margin-top: 40px;
+  margin-top: 38px;
   font-family: $bold;
   font-weight: 700;
   font-size: 14px;
-  padding: 14px 48px;
+  padding: 14px 49px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #00b2ff;
@@ -98,6 +140,12 @@
   }
 
   @include tablet {
-    margin-top: 32px;
+    margin-top: 40px;
+    margin-left: 4px;
+  }
+
+  @include mobile {
+    margin-top: 34px;
+    margin-left: 2px;
   }
 }
