@@ -2,9 +2,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding: 14px 0;
+  padding: 19px 5px;
   font-family: $mono;
   font-size: 13px;
+  letter-spacing: 0.04em;
   color: #1b2d37;
   opacity: 0.5;
   text-transform: uppercase;
@@ -12,11 +13,11 @@
   @include tablet {
     display: flex;
     justify-content: space-between;
-    padding: 22px 0;
+    padding: 26px 0;
   }
 
   @include mobile {
-    padding: 26px 0;
+    padding: 34px 0;
     flex-direction: column;
   }
 
@@ -30,6 +31,8 @@
 .privacy__copyright {
   display: flex;
   justify-content: space-between;
+  padding-left: -3px;
+  padding-right: 15px;
 
   @include tablet {
     display: none;
@@ -64,7 +67,7 @@
   }
 
   @include mobile {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 

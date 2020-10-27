@@ -387,7 +387,7 @@ a {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 20px 0 25px;
+      padding: 20px 0;
       margin: 0; } }
   @media (max-width: 767px) {
     .footer__logo-and-socio-wrap {
@@ -421,9 +421,16 @@ a {
 .footer__socio-list {
   margin: 0;
   padding: 0; }
+  @media (max-width: 1023px) {
+    .footer__socio-list {
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      margin-top: 10px; } }
   @media (max-width: 767px) {
     .footer__socio-list {
-      margin-top: 32px; } }
+      -ms-flex-item-align: center;
+          align-self: center;
+      margin-top: 36px; } }
 
 .footer__site-map-and-contacts-wrap {
   margin-left: auto;
@@ -548,7 +555,7 @@ a {
           flex-direction: column; }
   @media (max-width: 1023px) {
     .footer-links {
-      padding-top: 36px; } }
+      padding-top: 38px; } }
   @media (max-width: 767px) {
     .footer-links {
       padding-top: 0; }
@@ -575,7 +582,7 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 30px 0; } }
+    padding: 26px 0 23px; } }
 
 .footer-links__title {
   margin: 0;
@@ -638,10 +645,11 @@ a {
   @media (max-width: 1023px) {
     .footer-links__list {
       grid-auto-flow: row;
-      grid-template-rows: auto; } }
+      grid-template-rows: auto;
+      row-gap: 3px; } }
   @media (max-width: 767px) {
     .footer-links__list {
-      margin: 0 0 30px; } }
+      margin: 8px 0 28px; } }
   @media (max-width: 767px) {
     .footer-links__list--closed {
       display: none; } }
@@ -683,10 +691,10 @@ a {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 22px 0; } }
+      padding: 26px 0; } }
   @media (max-width: 767px) {
     .privacy {
-      padding: 26px 0;
+      padding: 34px 0;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -738,7 +746,7 @@ a {
       margin: 0; } }
   @media (max-width: 767px) {
     .privacy__terms {
-      margin-bottom: 20px; } }
+      margin-bottom: 30px; } }
 
 .privacy__developers {
   margin-left: auto; }
