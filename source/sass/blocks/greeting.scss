@@ -11,7 +11,7 @@
 
   @include tablet {
     background-image:
-      url("../img/board@1x.png"),
+      url("../img/board-tablet@1x.png"),
       url("../img/bg-greeting-triangles.svg"),
       url("../img/bg@1x.png");
     padding: 0 88px;
@@ -29,6 +29,11 @@
   @include mobile {
     padding: 0 15px;
 
+    background-image:
+      url("../img/board-mobile@1x.png"),
+      url("../img/bg-greeting-triangles.svg"),
+      url("../img/bg@1x.png");
+
     background-position:
       right -7px top 92px,
       right -307px top 70px,
@@ -45,7 +50,14 @@
 
     @include tablet {
       background-image:
-        url("../img/board@2x.png"),
+        url("../img/board-tablet@2x.png"),
+        url("../img/bg-greeting-triangles.svg"),
+        url("../img/bg@2x.png");
+    }
+
+    @include mobile {
+      background-image:
+        url("../img/board-mobile@2x.png"),
         url("../img/bg-greeting-triangles.svg"),
         url("../img/bg@2x.png");
     }
@@ -68,7 +80,7 @@
     width: 705px;
     height: 515px;
     background-image:
-      url("../img/board@1x.png"),
+      url("../img/board-desktop@1x.png"),
       url("../img/bg-greeting-triangles.svg");
 
     background-repeat: no-repeat;
@@ -95,7 +107,7 @@
   @include retina {
     &::after {
       background-image:
-        url("../img/board@2x.png"),
+        url("../img/board-desktop@2x.png"),
         url("../img/bg-greeting-triangles.svg");
     }
   }

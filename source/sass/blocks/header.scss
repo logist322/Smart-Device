@@ -9,6 +9,7 @@
   width: calc(100% - 40px);
   max-width: 1410px;
   padding: 30px 0;
+  z-index: 2;
 
   @include tablet {
     width: 100%;
