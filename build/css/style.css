@@ -969,14 +969,15 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 112px 0 60px; }
+  padding: 111px 0 60px; }
   @media (max-width: 1023px) {
     .advantages__list {
       padding: 54px 25px 40px; } }
   @media (max-width: 767px) {
     .advantages__list {
       grid-template-columns: 1fr;
-      padding: 40px 15px; } }
+      padding: 38px 15px;
+      gap: 20px; } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .advantages__list {
       display: -webkit-box;
@@ -988,7 +989,7 @@ a {
 .advantages__item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 40px 45px 70px;
+  padding: 39px 42px 68px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,10 +1011,10 @@ a {
   @media (max-width: 1023px) {
     .advantages__item {
       min-height: 235px;
-      padding: 25px; } }
+      padding: 24px 20px 25px 25px; } }
   @media (max-width: 767px) {
     .advantages__item {
-      padding: 25px 25px 30px; } }
+      padding: 24px 13px 31px 23px; } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .advantages__item {
       width: calc((100% - 30px) / 2); }
@@ -1027,7 +1028,7 @@ a {
       .advantages__item:nth-child(2n-1) {
         margin-right: 0; }
       .advantages__item:nth-child(n+1) {
-        margin-top: 30px; } }
+        margin-top: 20px; } }
 
 .advantages__icon {
   fill: currentColor; }
@@ -1041,19 +1042,25 @@ a {
   font-weight: 400; }
   @media (max-width: 1023px) {
     .advantages__item h3 {
-      margin-top: 15px; } }
+      margin-top: 11px; } }
   @media (max-width: 767px) {
     .advantages__item h3 {
-      font-size: 20px; } }
+      margin-top: 14px;
+      font-size: 20px;
+      padding-right: 17px; } }
 
 .advantages__item p {
   margin: 0;
   padding: 0;
-  margin-top: 15px;
+  margin-top: 22px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.34;
   color: #666666; }
+  @media (max-width: 1023px) {
+    .advantages__item p {
+      margin-top: 13px;
+      line-height: 1.37; } }
 
 .about {
   padding: 0 20px; }
