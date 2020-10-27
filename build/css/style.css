@@ -514,25 +514,15 @@ a {
     width: 27px;
     height: 27px;
     font-size: 0;
-    border-radius: 50%; }
-  .socio__item::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    content: "";
+    border-radius: 50%;
+    color: #cdcdcd; }
+    .socio__item a:hover {
+      color: #00b2ff; }
+  .socio__item svg {
     width: 27px;
     height: 27px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none; }
-  .socio__item--fb::after {
-    background-image: url("../img/fb.svg"); }
-  .socio__item--ok::after {
-    background-image: url("../img/ok.svg"); }
-  .socio__item--vk::after {
-    background-image: url("../img/vk.svg"); }
+    pointer-events: none;
+    fill: currentColor; }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .socio__item:not(:last-child) {
       margin-right: 16px; } }
