@@ -2,7 +2,7 @@
 
 (function () {
   var setButtonListener = function (buttonElement, listElement, oppositeButtonElement, oppositeListElement) {
-    buttonElement.addEventListener('click', function () {
+    buttonElement.parentNode.addEventListener('click', function () {
       buttonElement.classList.toggle('footer-links__button--closed');
       listElement.classList.toggle('footer-links__list--closed');
 
@@ -33,8 +33,6 @@
 
     removeNoJSButtonClass(siteMapButtonElement);
     removeNoJSListClass(siteMapListElement);
-
-    setButtonListener(siteMapButtonElement, siteMapListElement, contactsButtonElement, contactsListElement);
   }
 
   var contactsElement = document.querySelector('.footer__contacts');
@@ -45,9 +43,11 @@
 
     removeNoJSButtonClass(contactsButtonElement);
     removeNoJSListClass(contactsListElement);
-
-    setButtonListener(contactsButtonElement, contactsListElement, siteMapButtonElement, siteMapListElement);
   }
+
+  setButtonListener(siteMapButtonElement, siteMapListElement, contactsButtonElement, contactsListElement);
+
+  setButtonListener(contactsButtonElement, contactsListElement, siteMapButtonElement, siteMapListElement);
 })();
 
 $(document).ready(function(){
