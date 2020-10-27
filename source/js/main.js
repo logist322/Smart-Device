@@ -52,10 +52,45 @@
 
 $(document).ready(function(){
   $('.feedback__form input[type="tel"]').mask('+7(000)000-00-00');
+
+  var formElement = document.querySelector('.feedback__form');
+  var inputElement = document.querySelector('.feedback__form input[type="tel"]');
+
+  formElement.addEventListener('submit', function (evt) {
+    if (inputElement.value.length !== 16) {
+      inputElement.setCustomValidity('Введите телефон полностью');
+
+      evt.preventDefault();
+
+      return;
+    }
+  });
+
+  formElement.addEventListener('change', function () {
+    inputElement.setCustomValidity('');
+  });
 });
+
 
 $(document).ready(function(){
   $('.modal-call__form input[type="tel"]').mask('+7(000)000-00-00');
+
+  var formElement = document.querySelector('.modal-call__form');
+  var inputElement = document.querySelector('.modal-call__form input[type="tel"]');
+
+  formElement.addEventListener('submit', function (evt) {
+    if (inputElement.value.length !== 16) {
+      inputElement.setCustomValidity('Введите телефон полностью');
+
+      evt.preventDefault();
+
+      return;
+    }
+  });
+
+  formElement.addEventListener('change', function () {
+    inputElement.setCustomValidity('');
+  });
 });
 
 (function () {
@@ -124,8 +159,13 @@ $(document).ready(function(){
     isStorageSupport = false;
   }
 
-  nameInputElement.value = storageName;
-  telInputElement.value = storageTel;
+  if (storageName) {
+    nameInputElement.value = storageName;
+  }
+
+  if (storageTel) {
+    telInputElement.value = storageTel;
+  }
 
   if (isStorageSupport) {
     submitButtonElement.addEventListener('click', function () {
