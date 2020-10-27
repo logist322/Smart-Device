@@ -14,16 +14,16 @@
   margin: 0 auto;
   padding: 96px 0 114px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 575px;
   grid-template-areas: "nothing content";
 
   @include tablet {
     display: block;
-    padding: 94px 90px 100px;
+    padding: 85px 87px 103px;
   }
 
   @include mobile {
-    padding: 35px 15px 40px;
+    padding: 30px 15px 44px;
   }
 
   @include IE {
@@ -37,11 +37,11 @@
 
   &::before {
     position: absolute;
-    top: 10px;
-    left: -734px;
+    top: 0;
+    left: -770px;
     content: "";
-    width: 600px;
-    height: 500px;
+    width: 700px;
+    height: 485px;
     background-image: url("../img/bg-greeting-triangles.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -49,8 +49,8 @@
 
   &::after {
     position: absolute;
-    top: 60px;
-    left: -600px;
+    top: 65px;
+    left: -620px;
     content: "";
     width: 511px;
     height: 288px;
@@ -107,15 +107,22 @@
   padding: 0;
   font-family: $mono;
   font-size: 16px;
-  margin-top: 16px;
+  margin-top: 18px;
+  padding-left: 5px;
 
   @include tablet {
-    margin-top: 24px;
+    margin-top: 22px;
+    padding-left: 5px;
+  }
+
+  @include mobile {
+    margin-top: 16px;
+    padding-left: 0;
   }
 }
 
 .feedback__form {
-  margin-top: 50px;
+  margin-top: 53px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -124,9 +131,15 @@
     "button check";
   column-gap: 30px;
   row-gap: 40px;
+  padding-left: 5px;
+
+  @include tablet {
+    margin-top: 57px;
+  }
 
   @include mobile {
-    margin-top: 32px;
+    padding-left: 0;
+    margin-top: 30px;
     grid-template-columns: 1fr;
     gap: 30px;
     grid-template-areas:
@@ -163,7 +176,7 @@
 .feedback__form input[type="text"],
 .feedback__form input[type="tel"],
 .feedback__form textarea {
-  padding: 14px 16px;
+  padding: 16px 16px;
   font-family: $mono;
   font-size: 16px;
   color: #ffffff;
@@ -183,6 +196,10 @@
   &:active {
     opacity: 0.6;
   }
+
+  @include mobile {
+    padding: 17px 16px;
+  }
 }
 
 .feedback__form textarea {
@@ -190,6 +207,10 @@
   height: 154px;
   resize: none;
   grid-area: textarea;
+
+  @include tablet {
+    height: 162px;
+  }
 
   @include mobile {
     height: 104px;
@@ -217,9 +238,10 @@
   padding-left: 42px;
 
   &::before {
+    box-sizing: border-box;
     position: absolute;
-    top: 0;
-    left: 10px;
+    top: 5px;
+    left: 8px;
     content: "";
     width: 16px;
     height: 16px;
@@ -248,8 +270,8 @@
 
 .feedback__form input[type="checkbox"]:checked + label::after {
   position: absolute;
-  top: 3px;
-  left: 16px;
+  top: 6px;
+  left: 13px;
   content: "";
   width: 5px;
   height: 8px;
@@ -277,10 +299,12 @@
   font-family: $bold;
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: 0.05em;
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 2px;
 
   &:hover {
     border-color: #00b2ff;
@@ -291,6 +315,14 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @include tablet {
+    margin-top: 6px;
+  }
+
+  @include mobile {
+    margin-top: 0;
   }
 
   @include IE {
