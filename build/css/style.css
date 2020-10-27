@@ -227,13 +227,15 @@ a {
       padding: 20px 25px; } }
   @media (max-width: 767px) {
     .header {
-      padding: 15px; } }
+      padding: 17px; } }
 
 .header__logo {
-  margin-right: 120px; }
+  margin-right: 120px;
+  margin-top: 3px; }
   @media (max-width: 1023px) {
     .header__logo {
-      margin-right: auto; } }
+      margin-right: auto;
+      margin-top: 0; } }
 
 .header__contacts {
   display: -webkit-box;
@@ -247,15 +249,19 @@ a {
   margin-left: auto; }
   @media (max-width: 1023px) {
     .header__contacts {
-      margin-left: 36px; } }
+      margin-left: 36px;
+      margin-top: 10px;
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
   @media (max-width: 767px) {
     .header__contacts {
-      margin-left: 16px; } }
+      margin-left: 16px;
+      margin-top: 4px; } }
 
 .header__contacts-item {
   position: relative; }
   .header__contacts-item:not(:first-child) {
-    margin-left: 88px; }
+    margin-left: 123px; }
   .header__contacts-item a {
     font-family: "PT Mono", "Arial", sans-serif;
     font-size: 16px;
@@ -282,12 +288,12 @@ a {
     background-image: url("../img/phone.svg"); }
   @media (max-width: 1023px) {
     .header__contacts-item:not(:first-child) {
-      margin-left: 20px; }
+      margin-left: 31px; }
     .header__contacts-item a {
       font-size: 0;
       display: block;
-      width: 40px;
-      height: 40px; }
+      width: 26px;
+      height: 26px; }
     .header__contacts-item a::before {
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
@@ -297,7 +303,7 @@ a {
       pointer-events: none; } }
   @media (max-width: 767px) {
     .header__contacts-item:not(:first-child) {
-      margin-left: 10px; } }
+      margin-left: 18px; } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .header__contacts-item a::before {
       background-position: 0 0; } }
@@ -312,14 +318,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 13px 32px;
+  padding: 13px 27px;
   border: 1px solid #ffffff;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 48px;
   text-transform: uppercase;
   font-family: "Roboto Condensed-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: 0.05em;
   color: #ffffff; }
   .header__call:hover {
     border-color: #00b2ff;
